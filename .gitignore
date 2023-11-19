@@ -1,3 +1,5 @@
+config/calendar_key.txt
+
 # Gradle files
 .gradle/
 build/
