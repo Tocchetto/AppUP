@@ -1,0 +1,29 @@
+name: Flutter CI/CD
+
+on:
+  push:
+    branches: [ "automacao-pipeline" ]
+  #pull_request:
+    #branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.1.0'
+
+    - name: Install dependencies
+      run: flutter pub get
+
+    - name: Build APK
+      run: flutter build apk
+
+    - name: Run Tests
+      run: flutter test
