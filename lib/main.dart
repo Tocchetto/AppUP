@@ -8,8 +8,27 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  late Future<List<Evento>> futureEvents;
+
+  @override
+  void initState() {
+    super.initState();
+    futureEvents = fetchEvents(); // Inicializa a busca de eventos
+  }
+
+  void refreshEvents() {
+    setState(() {
+      futureEvents = fetchEvents(); // Atualiza os eventos
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +37,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Unidade Popular pelo Socialismo'),
+          title: const Text('Unidade Popular pelo Socialismo',
+            style: TextStyle(color: Colors.white)
+          ),
           backgroundColor: Colors.black,
         ),
         body: FutureBuilder<List<Evento>>(
-          future: fetchEvents(),
+          future: futureEvents,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Center(child: CircularProgressIndicator());
@@ -51,6 +72,10 @@ class MyApp extends StatelessWidget {
             }
           },
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: refreshEvents, // Chama o método de atualização
+          child: const Icon(Icons.refresh),
+        ),
       ),
     );
   }
@@ -68,6 +93,10 @@ Future<List<Evento>> fetchEvents() async {
     List<Evento> eventos = items.map((item) {
       return Evento.fromJson(item);
     }).toList();
+
+    // Filtrar eventos para mostrar apenas os que ocorrem no futuro
+    var agora = DateTime.now();
+    eventos = eventos.where((evento) => evento.data.isAfter(agora)).toList();
 
     return eventos;
   } else {
