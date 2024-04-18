@@ -3,6 +3,8 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:intl/intl.dart';
+import 'package:timezone/timezone.dart' as tz;
+import 'package:timezone/data/latest.dart' as tz;
 
 void main() {
   runApp(const MyApp());
@@ -134,10 +136,15 @@ class Evento {
   Evento({required this.titulo, required this.descricao, required this.data});
 
   factory Evento.fromJson(Map<String, dynamic> json) {
+    tz.initializeTimeZones();
+    var location = tz.getLocation('America/Sao_Paulo');
+    DateTime utcDate = DateTime.parse(json['start']['dateTime'] ?? json['start']['date']);
+    DateTime localDate = tz.TZDateTime.from(utcDate, location);
+
     return Evento(
       titulo: json['summary'] ?? 'Sem título',
       descricao: json['description'] ?? 'Sem descrição',
-      data: DateTime.parse(json['start']['dateTime'] ?? json['start']['date']), // Adapte conforme o formato da sua API
+      data: localDate,
     );
   }
 }
