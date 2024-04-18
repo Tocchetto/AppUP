@@ -32,6 +32,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "checked_yaml",
+      "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/checked_yaml-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "cli_util",
+      "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/cli_util-0.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "clock",
       "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/clock-1.1.1",
       "packageUri": "lib/",
@@ -75,15 +87,15 @@
     },
     {
       "name": "flutter_launcher_icons",
-      "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_launcher_icons-0.9.3",
+      "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_launcher_icons-0.13.1",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.18"
     },
     {
       "name": "flutter_lints",
-      "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-2.0.3",
+      "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-3.0.2",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.1"
     },
     {
       "name": "flutter_test",
@@ -93,9 +105,9 @@
     },
     {
       "name": "http",
-      "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/http-0.13.6",
+      "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.2.1",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.3"
     },
     {
       "name": "http_parser",
@@ -105,21 +117,27 @@
     },
     {
       "name": "image",
-      "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/image-3.3.0",
+      "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/image-4.1.7",
       "packageUri": "lib/",
       "languageVersion": "2.15"
     },
     {
       "name": "intl",
-      "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.17.0",
+      "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.19.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.0"
     },
     {
       "name": "js",
       "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.7.1",
       "packageUri": "lib/",
       "languageVersion": "3.1"
+    },
+    {
+      "name": "json_annotation",
+      "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/json_annotation-4.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
     },
     {
       "name": "leak_tracker",
@@ -141,7 +159,7 @@
     },
     {
       "name": "lints",
-      "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/lints-2.1.1",
+      "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/lints-3.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -182,6 +200,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "simple_gesture_detector",
+      "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/simple_gesture_detector-0.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///C:/Users/g.tocchetto/dev/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -210,6 +234,12 @@
       "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
+    },
+    {
+      "name": "table_calendar",
+      "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/table_calendar-3.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "term_glyph",
@@ -242,6 +272,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "web",
+      "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/web-0.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
       "name": "xml",
       "rootUri": "file:///C:/Users/g.tocchetto/AppData/Local/Pub/Cache/hosted/pub.dev/xml-6.5.0",
       "packageUri": "lib/",
@@ -260,7 +296,7 @@
       "languageVersion": "3.1"
     }
   ],
-  "generated": "2024-04-18T18:52:30.819310Z",
+  "generated": "2024-04-18T19:34:18.597024Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }

@@ -61,7 +61,7 @@ class _MyAppState extends State<MyApp> {
                       Text(DateFormat('dd/MM/yyyy').format(entry.key)), // Mostra a data
                       ...entry.value.map((evento) {
                         return ListTile(
-                            title: Text(evento.titulo),
+                            title: Text('${evento.titulo} - ${DateFormat.Hm().format(evento.data)}'),
                             subtitle: Text(evento.descricao)
                         );
                       }).toList(),
@@ -94,9 +94,10 @@ Future<List<Evento>> fetchEvents() async {
       return Evento.fromJson(item);
     }).toList();
 
-    // Filtrar eventos para mostrar apenas os que ocorrem no futuro
+    // Filtrar eventos para mostrar apenas os que ocorrem no futuro e ordenar
     var agora = DateTime.now();
     eventos = eventos.where((evento) => evento.data.isAfter(agora)).toList();
+    eventos.sort((a, b) => a.data.compareTo(b.data)); // Correção: Use 'sort' em vez de 'sorted'
 
     return eventos;
   } else {
@@ -115,6 +116,12 @@ Map<DateTime, List<Evento>> agruparEventosPorData(List<Evento> eventos) {
       eventosPorData[dataEvento] = [evento];
     }
   }
+
+  // Ordenar eventos dentro de cada data
+  eventosPorData.forEach((data, eventosDoDia) {
+    eventosDoDia.sort((a, b) => a.data.compareTo(b.data));
+  });
+
   return eventosPorData;
 }
 
