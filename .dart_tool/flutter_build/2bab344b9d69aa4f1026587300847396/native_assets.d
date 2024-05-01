@@ -1,0 +1,1 @@
+ C:\\Users\\g.tocchetto\\Documents\\source\\github\\AppUP\\.dart_tool\\flutter_build\\2bab344b9d69aa4f1026587300847396\\native_assets.yaml: 

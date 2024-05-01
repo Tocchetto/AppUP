@@ -1,11 +1,7 @@
 config/calendar_key.txt
 
 # Gradle files
-.gradle/
 build/
-
-# Local configuration file (sdk path, etc)
-local.properties
 
 # Log/OS Files
 *.log
